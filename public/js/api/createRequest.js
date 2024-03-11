@@ -26,8 +26,6 @@ const createRequest = (options = {}) => {
     }
   
     xhr.addEventListener("load", () => {
-        if (xhr.readyState === xhr.DONE && xhr.status === 200) {
-            options.callback(false, xhr.response);
-        }
+        options.callback(false, xhr.response);
     });
 };
